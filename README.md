@@ -11,6 +11,7 @@ The system is designed to mirror real-world recommender pipelines, where recall 
 2. [Stage 1: Candidate Generation (Recall-Oriented)](#stage-1-candidate-generation-recall-oriented)
 3. [Stage 2: Ranking Models (Precision-Oriented)](#stage-2-ranking-models-precision-oriented)
 4. [Key Results](#key-results)
+5. [Notebook Structure](#notebook-structure)
 
 ## Dataset and Preprocessing
 [MIND-small (Microsoft News Dataset)](https://msnews.github.io/) contains ~65k news articles, ~230k user impression logs, user click histories, timestamps, categories, sources, and article metadata. Both training and validation splits are used, with strict chronological handling to prevent data leakage.
@@ -57,3 +58,5 @@ Traditional models perform reasonably in one-stage ranking but struggle in two-s
 Hybrid MLP (TF–IDF + BERT) delivers ~10× improvement in Hit@5, and large gains in MRR@5 and nDCG@5.
 
 Results highlight the importance of high-quality candidate recall, hybrid feature representations, and hard-negative training aligned with the evaluation distribution.
+
+## Notebook Structure
