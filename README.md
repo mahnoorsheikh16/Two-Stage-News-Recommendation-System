@@ -60,3 +60,8 @@ Hybrid MLP (TF–IDF + BERT) delivers ~10× improvement in Hit@5, and large gain
 Results highlight the importance of high-quality candidate recall, hybrid feature representations, and hard-negative training aligned with the evaluation distribution.
 
 ## Notebook Structure
+`bert_embeddings.zip` contains precomputed DistilBERT sentence embeddings for all training and validation news articles to be used for ranking models.
+
+`nid2idx_train.pkl`, `nid2idx_val.pkl` have mappings from news_id to embedding indices for training and validation sets for fast lookup of article embeddings during candidate expansion and ranking without repeated indexing.
+
+`val_candidate_pools_k500.parquet` stores candidate pools (K = 500) generated for validation impressions during the retrieval stage, so all ranking models are evaluated on the same fixed candidate set.
